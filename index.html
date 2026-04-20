@@ -174,8 +174,23 @@
             <input type="text" name="business_name" placeholder="e.g. The Riverfront Grill" />
           </div>
           <div class="gfb-field">
-            <label>City / State</label>
-            <input type="text" name="city_state" placeholder="e.g. Portland, OR" />
+            <label>Street Address</label>
+            <input type="text" name="address" placeholder="e.g. 123 Main St" />
+          </div>
+        </div>
+
+        <div class="gfb-field-row">
+          <div class="gfb-field">
+            <label>City</label>
+            <input type="text" name="city" placeholder="e.g. Portland" />
+          </div>
+          <div class="gfb-field">
+            <label>State</label>
+            <input type="text" name="state" placeholder="e.g. OR" />
+          </div>
+          <div class="gfb-field">
+            <label>ZIP Code</label>
+            <input type="text" name="zip" placeholder="e.g. 97201" />
           </div>
         </div>
 
@@ -245,7 +260,10 @@ function submitToHubSpot() {
   var email        = document.querySelector('input[name="email"]').value.trim();
   var phone        = document.querySelector('input[name="phone"]').value.trim();
   var businessName = document.querySelector('input[name="business_name"]').value.trim();
-  var cityState    = document.querySelector('input[name="city_state"]').value.trim();
+  var address      = document.querySelector('input[name="address"]').value.trim();
+  var city         = document.querySelector('input[name="city"]').value.trim();
+  var state        = document.querySelector('input[name="state"]').value.trim();
+  var zip          = document.querySelector('input[name="zip"]').value.trim();
   var color        = document.querySelector('select[name="color"]').value;
   var numLocations = document.querySelector('select[name="num_dispensers"]').value;
 
@@ -283,7 +301,10 @@ function submitToHubSpot() {
       email:         email,
       phone:         phone,
       business_name: businessName,
-      city_state:    cityState,
+      address:       address,
+      city:          city,
+      state:         state,
+      zip:           zip,
       color:         color,
       num_dispensers: numLocations
     })
@@ -295,7 +316,7 @@ function submitToHubSpot() {
     btn.textContent = 'Submitted \u2713';
     btn.style.background = '#3275B3';
     btn.style.opacity = '1';
-    ['firstname','lastname','email','phone','business_name','city_state'].forEach(function(n) {
+    ['firstname','lastname','email','phone','business_name','address','city','state','zip'].forEach(function(n) {
       var el = document.querySelector('input[name="' + n + '"]');
       if (el) el.value = '';
     });
