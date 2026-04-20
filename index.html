@@ -270,6 +270,7 @@ function submitToHubSpot() {
 
   fetch(SCRIPT_URL, {
     method: 'POST',
+    mode: 'no-cors',
     body: JSON.stringify({
       firstname:     firstName,
       lastname:      lastName,
@@ -287,6 +288,7 @@ function submitToHubSpot() {
     msg.textContent = "You're in! We'll be in touch shortly. Your order ships next business day.";
     btn.textContent = 'Submitted \u2713';
     btn.style.background = '#3275B3';
+    btn.style.opacity = '1';
     ['firstname','lastname','email','phone','business_name','city_state'].forEach(function(n) {
       var el = document.querySelector('input[name="' + n + '"]');
       if (el) el.value = '';
