@@ -113,9 +113,9 @@
     <div class="gfb-c">
       <div class="gfb-hero-badge">North West Food Show — Portland 2026</div>
       <h1>Claim Your <span>Show Exclusive Deal</span> Before You Leave</h1>
-      <p>Buy 1 case of mouthwash and get 2 commercial dispensers free. Fill out the form below and we will be in touch to get everything sorted — no hassle.</p>
+      <p>Buy 1 case of mouthwash and get 2 commercial dispensers free. Fill out the form below and we will be in touch to get everything sorted.</p>
       <a href="#order-form" class="gfb-btn">Claim Your Deal Now</a>
-      <p class="gfb-hero-sub">We'll be in touch &nbsp;&bull;&nbsp; 30-day money back guarantee &nbsp;&bull;&nbsp; Lifetime warranty on dispensers</p>
+      <p class="gfb-hero-sub">30-day money back guarantee &nbsp;&bull;&nbsp; Lifetime warranty on dispensers</p>
     </div>
   </section>
 
@@ -144,7 +144,7 @@
       <div class="gfb-form-wrap">
         <div class="gfb-label">North West Food Show Exclusive</div>
         <h2>Claim Your 2 Free Dispensers</h2>
-        <p class="sub">Fill out your info below and we'll be in touch to get you set up. No risk, no hassle — 30-day money back guarantee.</p>
+        <p class="sub">Fill out your info below and we'll be in touch to get you set up.</p>
 
         <div class="gfb-field-row">
           <div class="gfb-field">
@@ -197,19 +197,25 @@
             </select>
           </div>
           <div class="gfb-field">
-            <label>How Many Locations?</label>
-            <select name="num_locations">
+            <label>How Many Dispensers?</label>
+            <select name="num_dispensers">
               <option value="">Select</option>
-              <option value="1">1 location</option>
-              <option value="2-5">2–5 locations</option>
-              <option value="6-10">6–10 locations</option>
-              <option value="11+">11+ locations</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10+">10+</option>
             </select>
           </div>
         </div>
 
         <button type="button" onclick="submitToHubSpot()" class="gfb-form-btn">Claim My Deal &#8594;</button>
-        <p class="gfb-form-trust">&#128274; 30-day money back &nbsp;&bull;&nbsp; Lifetime warranty &nbsp;&bull;&nbsp; We'll be in touch</p>
+        <p class="gfb-form-trust">&#128274; 30-day money back &nbsp;&bull;&nbsp; Lifetime warranty &nbsp;&bull;&nbsp; No risk, no hassle</p>
         <p id="gfb-form-msg" style="display:none;text-align:center;margin-top:12px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;"></p>
       </div>
     </div>
@@ -241,7 +247,7 @@ function submitToHubSpot() {
   var businessName = document.querySelector('input[name="business_name"]').value.trim();
   var cityState    = document.querySelector('input[name="city_state"]').value.trim();
   var color        = document.querySelector('select[name="color"]').value;
-  var numLocations = document.querySelector('select[name="num_locations"]').value;
+  var numLocations = document.querySelector('select[name="num_dispensers"]').value;
 
   if (!firstName || !lastName || !email || !phone) {
     msg.style.display = 'block';
@@ -279,7 +285,7 @@ function submitToHubSpot() {
       business_name: businessName,
       city_state:    cityState,
       color:         color,
-      num_locations: numLocations
+      num_dispensers: numLocations
     })
   })
   .then(function() {
@@ -294,7 +300,7 @@ function submitToHubSpot() {
       if (el) el.value = '';
     });
     document.querySelector('select[name="color"]').value = '';
-    document.querySelector('select[name="num_locations"]').value = '';
+    document.querySelector('select[name="num_dispensers"]').value = '';
   })
   .catch(function() {
     msg.style.display = 'block';
