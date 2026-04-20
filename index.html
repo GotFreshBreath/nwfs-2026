@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North West Food Show — GotFreshBreath Exclusive Deal</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    .gfb * { margin: 0; padding: 0; box-sizing: border-box; }
+    .gfb { font-family: 'DM Sans', sans-serif; color: #2a2a2a; line-height: 1.6; overflow-x: hidden; }
+    .gfb h1, .gfb h2, .gfb h3 { font-family: 'DM Serif Display', serif; }
+    .gfb img { max-width: 100%; height: auto; }
+    .gfb-c { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .gfb-hero {
+      background: linear-gradient(160deg, #0a1628 0%, #121212 40%, #0d1a2d 100%);
+      padding: 80px 0 70px; text-align: center; position: relative; overflow: hidden;
+    }
+    .gfb-hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(101,178,232,0.08) 0%, transparent 70%); border-radius: 50%;
+    }
+    .gfb-hero-badge {
+      display: inline-block; background: rgba(101,178,232,0.15); color: #65B2E8; font-size: 13px;
+      font-weight: 700; padding: 8px 20px; border-radius: 50px; letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .gfb-hero h1 { font-size: 46px; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    .gfb-hero h1 span { color: #65B2E8; }
+    .gfb-hero p { font-size: 18px; color: #9ab3cc; max-width: 620px; margin: 0 auto 32px; }
+    .gfb-hero-sub { font-size: 14px; color: #6a8aaa; margin-top: 16px; }
+
+    .gfb-btn {
+      display: inline-block; padding: 18px 44px; background: #65B2E8; color: #fff !important;
+      text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px;
+      font-family: 'DM Sans', sans-serif; letter-spacing: 0.3px; transition: all 0.2s;
+      border: none; cursor: pointer;
+    }
+    .gfb-btn:hover { background: #3275B3; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(50,117,179,0.3); }
+
+    /* OFFER BAR */
+    .gfb-offer { background: #3275B3; padding: 18px 0; text-align: center; }
+    .gfb-offer p { font-size: 16px; color: #fff; font-weight: 600; }
+    .gfb-offer span { color: #ffe066; }
+
+    /* PROOF BAR */
+    .gfb-proof { background: #fff; border-bottom: 1px solid #e4e8ec; padding: 28px 0; }
+    .gfb-proof-grid { display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; }
+    .gfb-proof-n { font-family: 'DM Serif Display', serif; font-size: 32px; color: #3275B3; }
+    .gfb-proof-l { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+    /* ORDER FORM */
+    .gfb-form-section { background: #F1F1F1; padding: 80px 0; }
+    .gfb-form-wrap {
+      max-width: 600px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 48px 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e4e8ec;
+    }
+    .gfb-label { font-size: 12px; color: #65B2E8; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; text-align: center; margin-bottom: 12px; }
+    .gfb-form-wrap h2 { text-align: center; font-size: 28px; margin-bottom: 8px; }
+    .gfb-form-wrap p.sub { text-align: center; color: #888; font-size: 14px; margin-bottom: 32px; }
+    .gfb-field { margin-bottom: 20px; }
+    .gfb-field label {
+      display: block; font-size: 13px; font-weight: 700; color: #121212; margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .gfb-field input, .gfb-field select {
+      width: 100%; padding: 14px 16px; border: 1px solid #ddd; border-radius: 8px;
+      font-size: 15px; font-family: 'DM Sans', sans-serif; color: #333;
+      background: #F1F1F1; transition: border 0.2s;
+    }
+    .gfb-field input:focus, .gfb-field select:focus { border-color: #65B2E8; outline: none; background: #fff; }
+    .gfb-field-row { display: flex; gap: 16px; }
+    .gfb-field-row .gfb-field { flex: 1; }
+    .gfb-form-btn {
+      width: 100%; padding: 18px; background: #65B2E8; color: #fff; border: none; border-radius: 8px;
+      font-size: 17px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer;
+      transition: all 0.2s; margin-top: 8px;
+    }
+    .gfb-form-btn:hover { background: #3275B3; }
+    .gfb-form-trust { text-align: center; margin-top: 16px; font-size: 13px; color: #999; }
+
+    /* FOOTER */
+    .gfb-foot { background: #0a0a0a; padding: 40px 0; text-align: center; }
+    .gfb-foot p { color: #666; font-size: 13px; margin-bottom: 6px; }
+    .gfb-foot a { color: #65B2E8; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .gfb-hero h1 { font-size: 30px; }
+      .gfb-hero { padding: 50px 0 40px; }
+      .gfb-proof-grid { gap: 24px; }
+      .gfb-field-row { flex-direction: column; gap: 0; }
+      .gfb-form-wrap { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="gfb">
+
+  <!-- NAV -->
+  <nav style="background:#1a1a1a;padding:12px 0;text-align:center;">
+    <a href="https://gotfreshbreath.com/about/" style="color:#999;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">About</a>
+    <span style="color:#444;font-family:'DM Sans',sans-serif;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+    <a href="https://gotfreshbreath.com/reorder/" style="color:#65B2E8;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">Reorder</a>
+    <span style="color:#444;font-family:'DM Sans',sans-serif;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+    <a href="https://gotfreshbreath.com/processing/my-account/" style="color:#ccc;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">My Account</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gfb-hero">
+    <div class="gfb-c">
+      <div class="gfb-hero-badge">North West Food Show — Portland 2026</div>
+      <h1>Claim Your <span>Show Exclusive Deal</span> Before You Leave</h1>
+      <p>Buy 1 case of mouthwash and get 2 commercial dispensers free. Fill out the form below and we will ship everything to your location next business day.</p>
+      <a href="#order-form" class="gfb-btn">Claim Your Deal Now</a>
+      <p class="gfb-hero-sub">Ships next business day &nbsp;&bull;&nbsp; 30-day money back guarantee &nbsp;&bull;&nbsp; Lifetime warranty on dispensers</p>
+    </div>
+  </section>
+
+  <!-- OFFER BAR -->
+  <section class="gfb-offer">
+    <div class="gfb-c">
+      <p>&#127873; &nbsp;<span>Show Deal: Buy 1 Mouthwash Case, Get 2 Dispensers Free.</span>&nbsp; Only available to North West Food Show attendees.</p>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <section class="gfb-proof">
+    <div class="gfb-c">
+      <div class="gfb-proof-grid">
+        <div style="text-align:center;"><div class="gfb-proof-n">1,000+</div><div class="gfb-proof-l">Locations Served</div></div>
+        <div style="text-align:center;"><div class="gfb-proof-n">10 min</div><div class="gfb-proof-l">Setup Time</div></div>
+        <div style="text-align:center;"><div class="gfb-proof-n">&infin;</div><div class="gfb-proof-l">Lifetime Warranty</div></div>
+        <div style="text-align:center;"><div class="gfb-proof-n">30 Day</div><div class="gfb-proof-l">Money Back</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section class="gfb-form-section" id="order-form">
+    <div class="gfb-c">
+      <div class="gfb-form-wrap">
+        <div class="gfb-label">North West Food Show Exclusive</div>
+        <h2>Claim Your 2 Free Dispensers</h2>
+        <p class="sub">Fill out your info below and we will ship your order next business day. No risk — 30-day money back guarantee.</p>
+
+        <div class="gfb-field-row">
+          <div class="gfb-field">
+            <label>First Name *</label>
+            <input type="text" name="firstname" placeholder="First name" required />
+          </div>
+          <div class="gfb-field">
+            <label>Last Name *</label>
+            <input type="text" name="lastname" placeholder="Last name" required />
+          </div>
+        </div>
+
+        <div class="gfb-field-row">
+          <div class="gfb-field">
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="you@restaurant.com" required />
+          </div>
+          <div class="gfb-field">
+            <label>Phone *</label>
+            <input type="tel" name="phone" placeholder="(555) 555-5555" required />
+          </div>
+        </div>
+
+        <div class="gfb-field-row">
+          <div class="gfb-field">
+            <label>Business / Restaurant Name</label>
+            <input type="text" name="business_name" placeholder="e.g. The Riverfront Grill" />
+          </div>
+          <div class="gfb-field">
+            <label>City / State</label>
+            <input type="text" name="city_state" placeholder="e.g. Portland, OR" />
+          </div>
+        </div>
+
+        <!-- Deal summary -->
+        <div style="background:#e8f2fa;border-radius:10px;padding:20px 24px;margin-bottom:20px;border:2px solid #65B2E8;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#3275B3;margin:0 0 6px;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Your Show Deal</p>
+          <p style="font-family:'DM Serif Display',serif;font-size:22px;color:#121212;margin:0 0 4px;">1 Mouthwash Case + 2 Free Dispensers</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#3275B3;margin:0;font-weight:700;">Free Shipping &nbsp;&bull;&nbsp; Ships Next Business Day</p>
+        </div>
+
+        <div class="gfb-field-row">
+          <div class="gfb-field">
+            <label>Dispenser Color *</label>
+            <select name="color" required>
+              <option value="">Select color</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="nickel">Nickel</option>
+            </select>
+          </div>
+          <div class="gfb-field">
+            <label>How Many Locations?</label>
+            <select name="num_locations">
+              <option value="">Select</option>
+              <option value="1">1 location</option>
+              <option value="2-5">2–5 locations</option>
+              <option value="6-10">6–10 locations</option>
+              <option value="11+">11+ locations</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" onclick="submitToHubSpot()" class="gfb-form-btn">Claim My Deal &#8594;</button>
+        <p class="gfb-form-trust">&#128274; 30-day money back &nbsp;&bull;&nbsp; Lifetime warranty &nbsp;&bull;&nbsp; Ships next business day</p>
+        <p id="gfb-form-msg" style="display:none;text-align:center;margin-top:12px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="gfb-foot">
+    <div class="gfb-c">
+      <p style="margin-bottom:8px;"><a href="https://gotfreshbreath.com">gotfreshbreath.com</a> &nbsp;&bull;&nbsp; <a href="tel:7702004231">770.200.4231</a> &nbsp;&bull;&nbsp; <a href="mailto:info@gotfreshbreath.com">info@gotfreshbreath.com</a></p>
+      <p>Trusted by Chick-fil-A, Deloitte, Signature Aviation, Walmart &amp; thousands more.</p>
+      <p style="margin-top:12px;">Lifetime guarantee &nbsp;&bull;&nbsp; 30-day money back &nbsp;&bull;&nbsp; Ships next day</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// After deploying the Apps Script, paste your web app URL here:
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfcyI8godMb_AsX5twqThQ9wlcApqEOALKi2tjWL9LJWLnttoQKYXtCmGZAPy6Um7e/exec';
+
+function submitToHubSpot() {
+  var msg = document.getElementById('gfb-form-msg');
+  var btn = document.querySelector('.gfb-form-btn');
+
+  var firstName    = document.querySelector('input[name="firstname"]').value.trim();
+  var lastName     = document.querySelector('input[name="lastname"]').value.trim();
+  var email        = document.querySelector('input[name="email"]').value.trim();
+  var phone        = document.querySelector('input[name="phone"]').value.trim();
+  var businessName = document.querySelector('input[name="business_name"]').value.trim();
+  var cityState    = document.querySelector('input[name="city_state"]').value.trim();
+  var color        = document.querySelector('select[name="color"]').value;
+  var numLocations = document.querySelector('select[name="num_locations"]').value;
+
+  if (!firstName || !lastName || !email || !phone) {
+    msg.style.display = 'block';
+    msg.style.color = '#e74c3c';
+    msg.textContent = 'Please fill in your first name, last name, email, and phone number.';
+    return;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.style.display = 'block';
+    msg.style.color = '#e74c3c';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  if (!color) {
+    msg.style.display = 'block';
+    msg.style.color = '#e74c3c';
+    msg.textContent = 'Please select a dispenser color.';
+    return;
+  }
+
+  btn.textContent = 'Submitting...';
+  btn.style.opacity = '0.7';
+  btn.style.pointerEvents = 'none';
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: JSON.stringify({
+      firstname:     firstName,
+      lastname:      lastName,
+      email:         email,
+      phone:         phone,
+      business_name: businessName,
+      city_state:    cityState,
+      color:         color,
+      num_locations: numLocations
+    })
+  })
+  .then(function() {
+    msg.style.display = 'block';
+    msg.style.color = '#3275B3';
+    msg.textContent = "You're in! We'll be in touch shortly. Your order ships next business day.";
+    btn.textContent = 'Submitted \u2713';
+    btn.style.background = '#3275B3';
+    ['firstname','lastname','email','phone','business_name','city_state'].forEach(function(n) {
+      var el = document.querySelector('input[name="' + n + '"]');
+      if (el) el.value = '';
+    });
+    document.querySelector('select[name="color"]').value = '';
+    document.querySelector('select[name="num_locations"]').value = '';
+  })
+  .catch(function() {
+    msg.style.display = 'block';
+    msg.style.color = '#e74c3c';
+    msg.textContent = 'Something went wrong. Please call us at 770.200.4231 or email info@gotfreshbreath.com.';
+    btn.textContent = 'Claim My Deal \u2192';
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
+  });
+}
+</script>
+
+</body>
+</html>
